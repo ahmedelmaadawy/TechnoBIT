@@ -8,16 +8,19 @@ body {
   font-optical-sizing: auto;
   margin: 0;
   padding: 0;
+  background-color: #dde6ed;
 }
 i {
   color: #dde6ed;
 }
+
 li {
   font-size: 20px;
   font-weight: 500;
   display: inline-block;
   margin: 10px 20px;
   list-style: none;
+  text-align: left;
 }
 a {
   text-decoration: none;
@@ -25,16 +28,26 @@ a {
 .nav {
   background-color: #27374d;
   height: 60px;
+  width: 100%;
 }
-li span {
-  margin-left: 650px;
+#right {
+  float: right
 }
 li button {
-  margin-left: 60px;
+  display: block;
+  margin-left: 20px;
   background-color: #dde6ed;
   color: #27374d;
   border: none;
   font-weight: 700;
   padding: 10px 20px;
   border-radius: 5px;
+}
+li button:hover {
+  cursor: pointer;
+  background-color: rgb(190, 29, 29);
+  color: #dde6ed;
+}
+.clearfix {
+  overflow: auto;
 }
