@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #dde6ed;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+i {
+  color: #dde6ed;
+}
+li {
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.nav {
+  background-color: #27374d;
+  height: 60px;
+}
