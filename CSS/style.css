@@ -1,7 +1,7 @@
 body {
   width: 70%;
   text-align: center;
-  margin: 70px auto;
+  margin: 20px auto;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   background-color: #27374d; /* Updated background color */
@@ -25,7 +25,7 @@ form {
   width: 500px;
   margin: 0 auto;
   background-color: #dde6ed; /* Updated form background color */
-  height: 450px;
+  /* height: 450px; */
   padding: 30px;
   border-radius: 100px;
 }
@@ -33,7 +33,7 @@ form {
 label,
 input,
 button {
-  margin: 20px auto;
+  margin: 5px auto;
   display: block;
   font-size: 20px;
   width: 400px;
@@ -75,4 +75,14 @@ button {
 button:hover {
   background-color: #9db2bf;
   color: #27374d;
+}
+span{
+  color: red;
+  font-size: 15px;
+  text-align: left;
+  display: block;
+  margin-left: 46px;
+}
+#all,#emailval,#passval,#confpassval{
+  display: none;
 }

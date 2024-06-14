@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="./CSS/style.css" />
     <title>Fanela</title>
   </head>
@@ -19,10 +15,18 @@
       <form action="./home.html">
         <h1>Login</h1>
         <hr />
-        <label for="username">User Name</label>
+        <span id="all">All Values Are Required</span>
+        <label for="username">Name</label>
         <input type="text" id="username" />
+        <span id="emailval">Please enter a valid email</span>
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <span id="passval">Length at least 8 including capital and small letters</span>
         <label for="password">Password</label>
         <input type="password" id="password" />
+        <span id="confpassval">Password and Confirm Password must be the same</span>
+        <label for="confpassword">Confirm Password</label>
+        <input type="password" id="confpassword" />
         <button type="submit">Login</button>
       </form>
     </div>
