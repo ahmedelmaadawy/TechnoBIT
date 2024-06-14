@@ -4,8 +4,7 @@ var all = document.getElementById("all");
 var emailval = document.getElementById("emailval");
 var passval = document.getElementById("passval");
 var confpassval = document.getElementById("confpassval");
-var emailPattern =
-  /^[a-zA-Z][a-zA-Z0-9]{0,9}[\.][a-zA-Z0-9]{0,15}@[a-z]{2,9}[\.][a-z]{3,9}$/;
+var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -13,7 +12,12 @@ form.addEventListener("submit", function (e) {
   var email = document.getElementById("email");
   var userPassword = document.getElementById("password");
   var confpassword = document.getElementById("confpassword");
-  var valid = IsValida(userName, email, userPassword, confpassword);
+  var valid = IsValida(
+    userName.value,
+    email.value,
+    userPassword.value,
+    confpassword.value
+  );
   if (valid) {
     document.cookie = `name=${userName.value}; `;
     document.cookie = `password=${userPassword.value}; `;
@@ -24,11 +28,11 @@ form.addEventListener("submit", function (e) {
 
 function IsValida(userName, email, password, confpassword) {
   if (
-    name.value == "" ||
-    userName.value == "" ||
-    email.value == "" ||
-    password.value == "" ||
-    confpassword.value == ""
+    userName == "" ||
+    userName == "" ||
+    email == "" ||
+    password == "" ||
+    confpassword == ""
   ) {
     all.style.display = "block";
     return false;

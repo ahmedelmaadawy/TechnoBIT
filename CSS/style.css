@@ -75,14 +75,18 @@ button {
 button:hover {
   background-color: #9db2bf;
   color: #27374d;
+  cursor: pointer;
 }
-span{
+span {
   color: red;
   font-size: 15px;
   text-align: left;
   display: block;
   margin-left: 46px;
 }
-#all,#emailval,#passval,#confpassval{
+#all,
+#emailval,
+#passval,
+#confpassval {
   display: none;
 }
