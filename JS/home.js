@@ -1,5 +1,5 @@
 document.getElementById("username").innerHTML = document.cookie
-  .split(";")[0]
+  .split(";")[2]
   .split("=")[1];
 // Slider
 var slides = document.querySelectorAll(".slides img");
