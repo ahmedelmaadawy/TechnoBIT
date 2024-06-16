@@ -22,6 +22,7 @@ form.addEventListener("submit", function (e) {
     document.cookie = `name=${userName.value}; `;
     document.cookie = `password=${userPassword.value}; `;
     document.cookie = `email=${email.value}; `;
+    
     window.location.href = "./home.html";
   }
 });

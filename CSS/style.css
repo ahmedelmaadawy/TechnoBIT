@@ -4,13 +4,13 @@ body {
   margin: 20px auto;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  background-color: #27374d; /* Updated background color */
+  background-color: #27374d;
 }
 
 hr {
-  background-color: #27374d; /* Updated hr color */
+  background-color: #27374d;
   height: 1px;
-  border: 1px solid #27374d; /* Updated hr border color */
+  border: 1px solid #27374d;
 }
 
 h1,
@@ -24,8 +24,8 @@ form h1 {
 form {
   width: 500px;
   margin: 0 auto;
-  background-color: #dde6ed; /* Updated form background color */
-  /* height: 450px; */
+  background-color: #dde6ed;
+
   padding: 30px;
   border-radius: 100px;
 }
@@ -89,4 +89,16 @@ span {
 #passval,
 #confpassval {
   display: none;
+}
+/* scroll bar style*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dde6ed;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #27374d;
+  border-radius: 10px;
 }

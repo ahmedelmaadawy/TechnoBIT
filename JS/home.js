@@ -43,3 +43,8 @@ function logout() {
 document.getElementById("topbutton").addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+/* go to products page */
+document.getElementById("products").addEventListener("click", function () {
+  window.location.href = "products.html";
+});
