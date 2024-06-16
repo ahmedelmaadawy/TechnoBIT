@@ -131,15 +131,18 @@ h2 {
   margin: 5px auto;
 }
 .product {
-  background-color: #9db2bf;
   color: #27374d;
+  border: #27374d 1px solid;
   padding: 20px;
   margin-left: 20px;
   width: 20%;
-  height: 300px;
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 20px;
+  transition: all 0.5s ease;
+}
+.product:hover {
+  background-color: #9db2bf;
 }
 .product p {
   margin: 20px 0;

@@ -119,14 +119,16 @@ body {
 
 .product {
   display: inline-block;
-  background-color: #9db2bf;
+  border: #27374d 1px solid;
   margin: 10px;
   padding: 20px;
+  height: 350px;
   border-radius: 20px;
   width: calc(25% - 40px);
   text-align: center;
   vertical-align: top;
   box-sizing: border-box;
+  transition: all 0.5s ease;
 }
 
 .product p {
@@ -153,6 +155,9 @@ body {
   font-size: 20px;
   transition: all 0.3s ease;
 }
+.product:hover {
+  background-color: #9db2bf;
+}
 .product button:hover {
   background-color: #27374d;
   color: #dde6ed;
@@ -166,7 +171,6 @@ body {
   color: #dde6ed;
   padding: 20px 0;
   text-align: center;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
