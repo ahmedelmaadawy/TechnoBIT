@@ -1,4 +1,3 @@
-localStorage.setItem("cart", []);
 function displayCart() {
   var cart = localStorage.getItem("cart");
   if (cart.length > 0) {
@@ -64,3 +63,13 @@ document.getElementById("topbutton").addEventListener("click", function () {
 document.getElementById("products").addEventListener("click", function () {
   window.location.href = "products.html";
 });
+
+function displayCart() {
+  var count = 0;
+  var cart = JSON.parse(localStorage.getItem("cart"));
+  for (var i = 0; i < cart.length; i++) {
+    count += cart[i].quantity;
+    }
+  document.getElementById("cart").innerHTML = count;
+}
+displayCart();
