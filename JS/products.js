@@ -33,8 +33,11 @@ function displayCategories() {
 function filterCategories(cat) {
   var products = [];
   for (var i = 0; i < allProducts.length; i++) {
-    if (allProducts[i].category == cat) products.push(products[i]);
+    if (allProducts[i].category == cat) {
+      products.push(allProducts[i]);
+    }
   }
+  productsElement.innerHTML = "";
   displayProducts(products);
 }
 function logout() {
@@ -49,11 +52,11 @@ function displayProducts(productsArray) {
     var addToCart = document.createElement("button");
     var view = document.createElement("button");
     var div = document.createElement("div");
-    addToCart.id = productsArray[i].id;
     div.classList.add("product");
     p.innerText = productsArray[i].productName;
     img.src = productsArray[i].Image;
     img.alt = productsArray[i].productName;
+    addToCart.id = productsArray[i].id;
     price.innerText = productsArray[i].price;
     addToCart.innerText = "Add To Cart";
     addToCart.onclick = function (e) {
