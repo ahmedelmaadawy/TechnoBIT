@@ -56,6 +56,7 @@ li button:hover {
 }
 /**/
 h1,
+h2,
 h3,
 span {
   color: #27374d;
@@ -105,3 +106,53 @@ td button:hover {
   cursor: pointer;
   background-color: rgb(136, 17, 17);
 }
+#check {
+  display: block;
+  text-align: center;
+  background-color: #27374d;
+  color: #dde6ed;
+  margin: 20px auto;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 500;
+}
+#check:hover {
+  cursor: pointer;
+  background-color: rgb(13, 99, 17);
+}
+
+.container .checkout{
+  color: #27374d;
+  background-color: #388fd1bd;
+  width: 50%;
+  margin: 70px auto;
+  border: none;
+  text-align: center;
+  padding: 20px;
+  border-radius: 50px;
+}
+.container .checkout p{
+  color: #27374d;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px;
+}
+.checkout i{
+  color: rgb(15, 134, 15);
+  font-size: 150px;
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+

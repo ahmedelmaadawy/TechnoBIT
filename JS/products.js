@@ -2,10 +2,10 @@ var productsElement = document.getElementsByClassName("products")[0];
 var categories = ["Category 1", "Category 2", "Category 3", "Category 4"];
 var categoriesElement = document.getElementsByClassName("categories-list")[0];
 /*products*/
-var products = JSON.parse(localStorage.getItem("products"));
+var allProducts = JSON.parse(localStorage.getItem("products"));
 getName();
 displayCategories();
-displayProducts();
+displayProducts(allProducts);
 displayCart();
 function getName() {
   for (var i = 0; i < document.cookie.split(";").length; i++) {
@@ -21,29 +21,40 @@ function displayCategories() {
   for (var i = 0; i < categories.length; i++) {
     var button = document.createElement("button");
     button.innerText = categories[i];
+    button.id = categories[i];
+    button.addEventListener("click", (e) => {
+      filterCategories(e.target.id);
+    });
     var li = document.createElement("li");
     li.append(button);
     categoriesElement.append(li);
   }
 }
+function filterCategories(cat) {
+  var products = [];
+  for (var i = 0; i < allProducts.length; i++) {
+    if (allProducts[i].category == cat) products.push(products[i]);
+  }
+  displayProducts(products);
+}
 function logout() {
   document.cookie = "";
   window.location.href = "index.html";
 }
-function displayProducts() {
-  for (var i = 0; i < products.length; i++) {
+function displayProducts(productsArray) {
+  for (var i = 0; i < productsArray.length; i++) {
     var p = document.createElement("p");
     var img = document.createElement("img");
     var price = document.createElement("p");
     var addToCart = document.createElement("button");
     var view = document.createElement("button");
     var div = document.createElement("div");
-    addToCart.id = products[i].id;
+    addToCart.id = productsArray[i].id;
     div.classList.add("product");
-    p.innerText = products[i].productName;
-    img.src = products[i].Image;
-    img.alt = products[i].productName;
-    price.innerText = products[i].price;
+    p.innerText = productsArray[i].productName;
+    img.src = productsArray[i].Image;
+    img.alt = productsArray[i].productName;
+    price.innerText = productsArray[i].price;
     addToCart.innerText = "Add To Cart";
     addToCart.onclick = function (e) {
       addItemToCart(e.target.id);

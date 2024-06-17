@@ -46,7 +46,7 @@ function displayCartTable() {
         productName.innerText = products[k].productName;
         price.innerText = products[k].price;
         quantity.innerText = cart[i].quantity;
-        total.innerText = products[k].price * cart[i].quantity;
+        total.innerText = products[k].price * cart[i].quantity + " $";
         totalPrice += products[k].price * cart[i].quantity;
         var tr = document.createElement("tr");
         tr.append(productName, price, quantity, total, btn);
@@ -54,7 +54,7 @@ function displayCartTable() {
       }
     }
   }
-  document.getElementById("totalprice").innerText = totalPrice;
+  document.getElementById("totalprice").innerText = totalPrice + " $";
 }
 function removeFromCart(productId) {
   var cart = JSON.parse(localStorage.getItem("cart"));
@@ -71,4 +71,20 @@ function removeFromCart(productId) {
   document.getElementsByTagName("tbody")[0].innerHTML = "";
   displayCartTable();
   displayCart();
+}
+
+document;
+function checkout() {
+  document.getElementsByClassName(
+    "container"
+  )[0].innerHTML = `<div class="checkout">
+                        <h2>Congratulations</h2>
+                        <i class="material-symbols-outlined">Check_Circle</i>
+                        <p>Your order has been placed successfully</p>
+                        <p>Thank you for shopping with us</p>
+                        <p>Your order will be delivered to you shortly</p>
+                        </div>
+                        `;
+
+  localStorage.setItem("cart", "[]");
 }
