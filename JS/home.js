@@ -1,10 +1,36 @@
-function displayCart() {
-  var cart = localStorage.getItem("cart");
-  if (cart.length > 0) {
-    document.getElementById("cart").innerHTML = cart.length;
-  }
-}
 displayCart();
+getName();
+
+localStorage.setItem(
+  "products",
+  JSON.stringify([
+    {
+      id: 1,
+      productName: "Product 1",
+      price: 100,
+      Image: "../Images/Slider/1.jfif",
+    },
+    {
+      id: 2,
+      productName: "Product 2",
+      price: 100,
+      Image: "../Images/Slider/2.jfif",
+    },
+    {
+      id: 3,
+      productName: "Product 3",
+      price: 100,
+      Image: "../Images/Slider/3.jfif",
+    },
+    {
+      id: 4,
+      productName: "Product 4",
+      price: 100,
+      Image: "../Images/Slider/4.jfif",
+    },
+  ])
+);
+
 function getName() {
   for (var i = 0; i < document.cookie.split(";").length; i++) {
     if (document.cookie.split(";")[i].split("=")[0].trim() == "name") {
@@ -14,7 +40,6 @@ function getName() {
     }
   }
 }
-getName();
 
 // Slider
 var slides = document.querySelectorAll(".slides img");
@@ -67,9 +92,9 @@ document.getElementById("products").addEventListener("click", function () {
 function displayCart() {
   var count = 0;
   var cart = JSON.parse(localStorage.getItem("cart"));
+
   for (var i = 0; i < cart.length; i++) {
     count += cart[i].quantity;
-    }
+  }
   document.getElementById("cart").innerHTML = count;
 }
-displayCart();

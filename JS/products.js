@@ -2,35 +2,11 @@ var productsElement = document.getElementsByClassName("products")[0];
 var categories = ["Category 1", "Category 2", "Category 3", "Category 4"];
 var categoriesElement = document.getElementsByClassName("categories-list")[0];
 /*products*/
-var products = [
-  {
-    id: 1,
-    productName: "Product 1",
-    price: 100,
-    Image: "../Images/Slider/1.jfif",
-  },
-  {
-    id: 2,
-    productName: "Product 2",
-    price: 100,
-    Image: "../Images/Slider/2.jfif",
-  },
-  {
-    id: 3,
-    productName: "Product 3",
-    price: 100,
-    Image: "../Images/Slider/3.jfif",
-  },
-  {
-    id: 4,
-    productName: "Product 4",
-    price: 100,
-    Image: "../Images/Slider/4.jfif",
-  },
-];
+var products = JSON.parse(localStorage.getItem("products"));
 getName();
 displayCategories();
 displayProducts();
+displayCart();
 function getName() {
   for (var i = 0; i < document.cookie.split(";").length; i++) {
     if (document.cookie.split(";")[i].split("=")[0].trim() == "name") {
@@ -79,7 +55,7 @@ function displayProducts() {
 /*cart */
 function addItemToCart(productId) {
   var cart = JSON.parse(localStorage.getItem("cart"));
-  if (cart == undefined) {
+  if (cart.length == 0) {
     localStorage.setItem(
       "cart",
       JSON.stringify([{ id: productId, quantity: 1 }])

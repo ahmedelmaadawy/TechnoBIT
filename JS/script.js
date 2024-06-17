@@ -23,7 +23,7 @@ form.addEventListener("submit", function (e) {
     document.cookie = `name=${userName.value}; `;
     document.cookie = `password=${userPassword.value}; `;
     document.cookie = `email=${email.value}; `;
-    localStorage.setItem("cart", JSON.stringify([{}]));
+    localStorage.setItem("cart", "[]");
 
     window.location.href = "./home.html";
   }
