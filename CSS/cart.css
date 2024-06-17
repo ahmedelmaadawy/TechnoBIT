@@ -51,3 +51,53 @@ li button:hover {
 .clearfix {
   overflow: auto;
 }
+/**/
+h1,
+h3,span {
+  color: #27374d;
+  text-align: center;
+  margin: 10px;
+}
+
+/**/
+table,
+th,
+thead {
+  border-collapse: collapse;
+  color: #27374d;
+  border: 2px solid #27374d;
+}
+
+table {
+  margin: 20px auto;
+  width: 80%;
+}
+th {
+  padding: 5px;
+  background-color: #27374d;
+  color: #dde6ed;
+}
+
+td {
+  text-align: center;
+  padding: 5px;
+  background-color: #dde6ed;
+  color: #27374d;
+  border: #27374d 2px solid;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+td button {
+  width: 70%;
+  font-size: 20px;
+  border: none;
+  border-radius: 50px;
+  background-color: #27374d;
+  color: #dde6ed;
+  padding: 10px;
+}
+td button:hover {
+  cursor: pointer;
+  background-color: rgb(136, 17, 17);
+}
