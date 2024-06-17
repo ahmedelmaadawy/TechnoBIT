@@ -26,7 +26,10 @@ function displayCategories() {
     categoriesElement.append(li);
   }
 }
-
+function logout() {
+  document.cookie = "";
+  window.location.href = "index.html";
+}
 function displayProducts() {
   for (var i = 0; i < products.length; i++) {
     var p = document.createElement("p");

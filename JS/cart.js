@@ -11,6 +11,10 @@ function getName() {
     }
   }
 }
+function logout() {
+  document.cookie = "";
+  window.location.href = "index.html";
+}
 function displayCart() {
   var count = 0;
   var cart = JSON.parse(localStorage.getItem("cart"));
