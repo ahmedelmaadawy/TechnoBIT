@@ -1,6 +1,22 @@
-document.getElementById("username").innerHTML = document.cookie
-  .split(";")[2]
-  .split("=")[1];
+localStorage.setItem("cart", []);
+function displayCart() {
+  var cart = localStorage.getItem("cart");
+  if (cart.length > 0) {
+    document.getElementById("cart").innerHTML = cart.length;
+  }
+}
+displayCart();
+function getName() {
+  for (var i = 0; i < document.cookie.split(";").length; i++) {
+    if (document.cookie.split(";")[i].split("=")[0].trim() == "name") {
+      document.getElementById("username").innerHTML = document.cookie
+        .split(";")
+        [i].split("=")[1];
+    }
+  }
+}
+getName();
+
 // Slider
 var slides = document.querySelectorAll(".slides img");
 var slideIndex = 0;

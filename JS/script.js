@@ -6,6 +6,7 @@ var passval = document.getElementById("passval");
 var confpassval = document.getElementById("confpassval");
 var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   var userName = document.getElementById("username");
@@ -22,7 +23,7 @@ form.addEventListener("submit", function (e) {
     document.cookie = `name=${userName.value}; `;
     document.cookie = `password=${userPassword.value}; `;
     document.cookie = `email=${email.value}; `;
-    
+
     window.location.href = "./home.html";
   }
 });

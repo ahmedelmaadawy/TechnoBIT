@@ -1,7 +1,6 @@
-document.getElementById("username").innerHTML = document.cookie
-  .split(";")[2]
-  .split("=")[1];
-console.log(document.cookie);
+var productsElement = document.getElementsByClassName("products")[0];
+var categories = ["Category 1", "Category 2", "Category 3", "Category 4"];
+var categoriesElement = document.getElementsByClassName("categories-list")[0];
 /*products*/
 var products = [
   {
@@ -29,8 +28,29 @@ var products = [
     Image: "../Images/Slider/4.jfif",
   },
 ];
+getName();
+displayCategories();
+displayProducts();
+function getName() {
+  for (var i = 0; i < document.cookie.split(";").length; i++) {
+    if (document.cookie.split(";")[i].split("=")[0].trim() == "name") {
+      document.getElementById("username").innerHTML = document.cookie
+        .split(";")
+        [i].split("=")[1];
+    }
+  }
+}
 
-var productsElement = document.getElementsByClassName("products")[0];
+function displayCategories() {
+  for (var i = 0; i < categories.length; i++) {
+    var button = document.createElement("button");
+    button.innerText = categories[i];
+    var li = document.createElement("li");
+    li.append(button);
+    categoriesElement.append(li);
+  }
+}
+
 function displayProducts() {
   for (var i = 0; i < products.length; i++) {
     var p = document.createElement("p");
@@ -49,6 +69,6 @@ function displayProducts() {
     div.append(p, img, price, addToCart, view);
     productsElement.append(div);
   }
-  console.log(div);
 }
-displayProducts();
+
+/*cart */
