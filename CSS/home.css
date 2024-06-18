@@ -169,6 +169,10 @@ h2 {
   color: #dde6ed;
   cursor: pointer;
 }
+p span {
+  color: #9db2bf;
+  text-decoration: line-through;
+}
 /*see products*/
 .see-products {
   text-align: center;
