@@ -138,6 +138,9 @@ h2 {
   margin-bottom: 10px;
   margin-top: 10px;
 }
+.products-container h2 {
+  margin: 10px;
+}
 .products {
   margin: 5px auto;
 }
@@ -213,18 +216,7 @@ p span {
 .see-products p {
   color: #27374d;
 }
-/* scroll bar style*/
-::-webkit-scrollbar {
-  width: 15px;
-}
 
-::-webkit-scrollbar-track {
-  background-color: #dde6ed;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #27374d;
-  border-radius: 10px;
-}
 /* review section*/
 .reviews {
   color: #27374d;
@@ -240,7 +232,7 @@ p span {
 .review p {
   color: #27374d;
 }
-/**/
+/*newsletter*/
 .newsletter {
   text-align: center;
   padding: 20px;
@@ -258,6 +250,7 @@ p span {
   margin-right: 10px;
   border: 1px solid #27374d;
   border-radius: 5px;
+  color: #27374d;
 }
 
 .newsletter button {
@@ -267,4 +260,17 @@ p span {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+/* scroll bar style*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dde6ed;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #27374d;
+  border-radius: 10px;
 }

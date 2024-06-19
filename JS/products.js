@@ -1,10 +1,11 @@
 var productsElement = document.getElementsByClassName("products")[0];
 var categories = [
   "All Products",
-  "Category 1",
-  "Category 2",
-  "Category 3",
-  "Category 4",
+  "Phones",
+  "Laptops",
+  "Mouses",
+  "Keyboards",
+  "Headphones",
 ];
 var categoriesElement = document.getElementsByClassName("categories-list")[0];
 /*products*/
@@ -66,13 +67,14 @@ function displayProducts(productsArray) {
     view.id = productsArray[i].id;
     view.addEventListener("click", function (e) {
       viewProduct(e.target.id);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
     div.classList.add("product");
     p.innerText = productsArray[i].productName;
     img.src = productsArray[i].Image;
     img.alt = productsArray[i].productName;
     addToCart.id = productsArray[i].id;
-    price.innerText = productsArray[i].price;
+    price.innerText = productsArray[i].price + " $";
     addToCart.innerText = "Add To Cart";
     addToCart.onclick = function (e) {
       addItemToCart(e.target.id);

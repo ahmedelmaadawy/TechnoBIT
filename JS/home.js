@@ -1,39 +1,6 @@
 displayCart();
 getName();
 
-localStorage.setItem(
-  "products",
-  JSON.stringify([
-    {
-      id: 1,
-      productName: "Product 1",
-      category: "Category 1",
-      price: 100,
-      Image: "../Images/Slider/1.jfif",
-    },
-    {
-      id: 2,
-      productName: "Product 2",
-      category: "Category 2",
-      price: 100,
-      Image: "../Images/Slider/2.jfif",
-    },
-    {
-      id: 3,
-      productName: "Product 3",
-      category: "Category 3",
-      price: 100,
-      Image: "../Images/Slider/3.jfif",
-    },
-    {
-      id: 4,
-      productName: "Product 4",
-      category: "Category 4",
-      price: 100,
-      Image: "../Images/Slider/4.jfif",
-    },
-  ])
-);
 
 function getName() {
   for (var i = 0; i < document.cookie.split(";").length; i++) {
