@@ -143,6 +143,7 @@ h2 {
 }
 .products {
   margin: 5px auto;
+  text-align: center; /* Center align products */
 }
 .product {
   color: #27374d;
@@ -150,10 +151,12 @@ h2 {
   padding: 20px;
   margin-left: 20px;
   width: 20%;
+  height: 400px;
   border-radius: 50px;
   display: inline-block;
   margin-bottom: 20px;
   transition: all 0.5s ease;
+  vertical-align: top; /* Ensure all products align at the top */
 }
 .product:hover {
   background-color: #9db2bf;
@@ -168,7 +171,6 @@ h2 {
 .product img {
   display: block;
   margin: 10px auto;
-
   max-width: 250px;
   max-height: 250px;
 }

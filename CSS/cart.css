@@ -124,7 +124,7 @@ td button:hover {
   background-color: rgb(13, 99, 17);
 }
 
-.container .checkout{
+.container .checkout {
   color: #27374d;
   background-color: #388fd1bd;
   width: 50%;
@@ -134,25 +134,38 @@ td button:hover {
   padding: 20px;
   border-radius: 50px;
 }
-.container .checkout p{
+.container .checkout p {
   color: #27374d;
   font-size: 20px;
   font-weight: 500;
   margin: 10px;
 }
-.checkout i{
+.checkout i {
   color: rgb(15, 134, 15);
   font-size: 150px;
   margin: 10px;
 }
 
+/* ------------footer ---------*/
 
+.footer {
+  background-color: #27374d;
+  color: #dde6ed;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
 
-
-
-
-
-
-
-
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9db2bf;
+}
