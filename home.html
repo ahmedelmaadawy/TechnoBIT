@@ -11,16 +11,14 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="icon" href="./Images/Icon/phone.png" type="image/x-icon" />
     <link rel="stylesheet" href="./CSS/home.css" />
-    <title>Fanela</title>
+    <title>Techno BIT</title>
   </head>
   <body>
     <div class="nav">
       <ul>
-        <a href="">
-          <i class="fas fa-tshirt"></i>
-        </a>
-        <li><a href="#">Fanela</a></li>
+        <li><a href="#">TechnoBIT</a></li>
         <li><a href="./home.html">Home</a></li>
         <li><a href="./products.html">Products</a></li>
         <li><a href="#">About</a></li>
@@ -41,60 +39,99 @@
     <button id="topbutton">
       <span class="material-symbols-outlined"> arrow_upward </span>
     </button>
+    
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Welcome to Techno BIT</h1>
+      <p>Your one-stop shop for the latest and greatest in tech products.</p>
+    </div>
+
     <div class="slider">
       <div class="slides">
-        <img class="slide" src="./Images/Slider/1.jfif" alt="" />
-        <img class="slide" src="./Images/Slider/2.jfif" alt="" />
-        <img class="slide" src="./Images/Slider/3.jfif" alt="" />
-        <img class="slide" src="./Images/Slider/4.jfif" alt="" />
+        <img class="slide" src="./Images/Slider/1.jpg" alt="Image 1" />
+        <img class="slide" src="./Images/Slider/2.jpg" alt="Image 2" />
+        <img class="slide" src="./Images/Slider/3.jpg" alt="Image 3" />
+        <img class="slide" src="./Images/Slider/4.jpg" alt="Image 4" />
+        <img class="slide" src="./Images/Slider/5.jpg" alt="Image 5" />
+        <img class="slide" src="./Images/Slider/6.jpg" alt="Image 6" />
+        <img class="slide" src="./Images/Slider/7.jpg" alt="Image 7" />
       </div>
       <button class="prev" onclick="prevSlide()">&#10094;</button>
       <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
+    <!-- Products on Sale Section -->
     <hr />
-    <h1>Hello To Our Store</h1>
+    <h2>Products On Sale</h2>
     <div class="products-container">
-      <h2>Products On Sale</h2>
       <div class="products">
+        <!-- Repeat for each product on sale -->
         <div class="product">
-          <p>Product Name</p>
-          <img src="./Images/Slider/1.jfif" alt="" />
-          <p>Price : 15.00$<span> 20.00</span></p>
+          <p>Samsung Phone</p>
+          <img src="./Images/Products/Phones/1.jpg" alt="Samsung Phone" />
+          <p class="sale">Price : $1500.00 <span>2000.00</span></p>
           <button>Add To Cart</button>
         </div>
         <div class="product">
-          <p>Product Name</p>
-          <img src="./Images/Slider/1.jfif" alt="" />
-          <p>Price : 15.00$ <span> 20.00</span></p>
+          <p>Dell Laptop</p>
+          <img src="./Images/Products/Laptops/1.avif" alt="Dell Laptop" />
+          <p class="sale">Price : $3000.00 <span>5000.00</span></p>
           <button>Add To Cart</button>
         </div>
         <div class="product">
-          <p>Product Name</p>
-          <img src="./Images/Slider/1.jfif" alt="" />
-          <p>Price :15.00$<span> 20.00</span></p>
+          <p>Mouse</p>
+          <img src="./Images/Products/Mouses/1.jpg" alt="Mouse" />
+          <p class="sale">Price : $15.00 <span>20.00</span></p>
           <button>Add To Cart</button>
         </div>
         <div class="product">
-          <p>Product Name</p>
-          <img src="./Images/Slider/1.jfif" alt="" />
-          <p>Price : 15.00$<span> 20.00</span></p>
+          <p>Slim Keyboard</p>
+          <img src="./Images/Products/Keyboards/1.jpg" alt="Slim Keyboard" />
+          <p class="sale">Price : $50.00 <span>70.00</span></p>
           <button>Add To Cart</button>
         </div>
       </div>
     </div>
+    
+    <!-- See Products Section -->
+ <hr />
+<div class="see-products">
+  <h2>Discover Our Latest Products</h2>
+  <p>Browse through our wide selection of the latest and greatest in tech.</p>
+  <button id="products">    See Products
+  </button>
+</div>
+
+    <!-- Customer Reviews Section -->
     <hr />
-    <div class="see-products">
-      <h2>See Our Products From Here</h2>
-      <button id="products">See Products</button>
+    <div class="reviews">
+      <h2>What Our Customers Say</h2>
+      <div class="review">
+        <p>"Amazing products and great service!" - John Doe</p>
+      </div>
+      <div class="review">
+        <p>"I love my new laptop from Techno BIT!" - Jane Smith</p>
+      </div>
     </div>
 
-    <!-- footer -->
+    <!-- Newsletter Signup Section -->
+    <hr />
+    <div class="newsletter">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for the latest updates and offers.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Footer -->
     <div class="footer">
       <div class="container">
-        <p>&copy; 2024 Fanela. All rights reserved.</p>
+        <p>&copy; 2024 Techno BIT. All rights reserved.</p>
         <p>@ Ahmed Elmaadawy</p>
       </div>
     </div>
+    
     <script src="./JS/home.js"></script>
   </body>
 </html>

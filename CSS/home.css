@@ -48,8 +48,18 @@ li button:hover {
   background-color: rgb(190, 29, 29);
   color: #dde6ed;
 }
+.nav ul li a:hover {
+  color: #9db2bf;
+}
 .clearfix {
   overflow: auto;
+}
+.hero {
+  text-align: center;
+}
+.hero h1,
+.hero p {
+  color: #27374d;
 }
 /*float button*/
 #topbutton {
@@ -125,7 +135,8 @@ h1,
 h2 {
   color: #27374d;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .products {
   margin: 5px auto;
@@ -152,7 +163,11 @@ h2 {
   text-align: center;
 }
 .product img {
-  width: 90%;
+  display: block;
+  margin: 10px auto;
+
+  max-width: 250px;
+  max-height: 250px;
 }
 .product button {
   font-size: 20px;
@@ -170,8 +185,12 @@ h2 {
   cursor: pointer;
 }
 p span {
-  color: #9db2bf;
+  color: #5faada;
   text-decoration: line-through;
+}
+.product .sale {
+  font-size: 20px;
+  color: #cf3a3a;
 }
 /*see products*/
 .see-products {
@@ -191,6 +210,9 @@ p span {
   color: #dde6ed;
   cursor: pointer;
 }
+.see-products p {
+  color: #27374d;
+}
 /* scroll bar style*/
 ::-webkit-scrollbar {
   width: 15px;
@@ -202,4 +224,47 @@ p span {
 ::-webkit-scrollbar-thumb {
   background-color: #27374d;
   border-radius: 10px;
+}
+/* review section*/
+.reviews {
+  color: #27374d;
+  padding: 20px;
+  text-align: center;
+}
+
+.reviews .review {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  font-style: italic;
+}
+.review p {
+  color: #27374d;
+}
+/**/
+.newsletter {
+  text-align: center;
+  padding: 20px;
+}
+.newsletter p {
+  color: #27374d;
+  margin: 5px;
+}
+.newsletter form {
+  display: inline-block;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #27374d;
+  border-radius: 5px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background: #27374d;
+  color: #dde6ed;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

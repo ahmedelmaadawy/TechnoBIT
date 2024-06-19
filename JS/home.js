@@ -75,7 +75,6 @@ function prevSlide() {
   showSlide(slideIndex);
 }
 function nextSlide() {
-  console.log(slideIndex);
   slideIndex++;
   showSlide(slideIndex);
 }

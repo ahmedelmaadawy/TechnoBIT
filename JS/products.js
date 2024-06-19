@@ -47,7 +47,8 @@ function filterCategories(cat) {
       }
     }
   }
-  productsElement.innerHTML = "";
+  productsElement.innerHTML = `<div class="view-product">
+          </div>`;
   displayProducts(products);
 }
 function logout() {
