@@ -1,7 +1,6 @@
 displayCart();
 getName();
 
-
 function getName() {
   for (var i = 0; i < document.cookie.split(";").length; i++) {
     if (document.cookie.split(";")[i].split("=")[0].trim() == "name") {
@@ -67,4 +66,26 @@ function displayCart() {
     count += cart[i].quantity;
   }
   document.getElementById("cart").innerHTML = count;
+}
+function addToCart(productId) {
+  var cart = JSON.parse(localStorage.getItem("cart"));
+  if (cart.length == 0) {
+    localStorage.setItem(
+      "cart",
+      JSON.stringify([{ id: productId, quantity: 1 }])
+    );
+    return;
+  } else {
+    for (var i = 0; i < cart.length; i++) {
+      if (cart[i].id == productId) {
+        cart[i].quantity++;
+        localStorage.setItem("cart", JSON.stringify(cart));
+        console.log(cart);
+        return;
+      }
+    }
+    cart.push({ id: productId, quantity: 1 });
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+  displayCart();
 }
