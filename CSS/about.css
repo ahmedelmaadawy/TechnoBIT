@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #27374d;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #dde6ed;
+}
+i {
+  color: #dde6ed;
+}
+
+li {
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 10px 20px;
+  list-style: none;
+  text-align: left;
+}
+a {
+  text-decoration: none;
+  color: #dde6ed; /* Ensuring text in links is visible against the dark navbar */
+}
+.nav {
+  background-color: #27374d;
+  height: 60px;
+  width: 100%;
+}
+.nav span {
+  color: #dde6ed; /* Ensuring text in spans is visible against the dark navbar */
+}
+#right {
+  float: right;
+}
+li button {
+  display: block;
+  margin-left: 20px;
+  background-color: #dde6ed;
+  color: #27374d;
+  border: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+li button:hover {
+  cursor: pointer;
+  background-color: rgb(190, 29, 29);
+  color: #dde6ed;
+}
+.clearfix {
+  overflow: auto;
+}
+/*about*/
+.about-us {
+  width: 60%;
+  margin: 0 auto;
+  height: 100vh;
+  padding: 30px;
+}
+.about-us h1,
+.about-us h2 {
+  text-align: center;
+  margin: 10px;
+  font-size: 30px;
+}
+.about-us p{
+  font-size: 25px;
+  margin: 10px;
+  word-spacing: 3px;}
+
+.about-us ul {
+  list-style-type: disc;
+
+}
+.about-us ul li {
+  color: #27374d;
+  font-size: 20px;
+  display: list-item; /* Ensures list items appear vertically */
+}
+.content{
+    margin: 10px;
+}
+
+/* Footer */
+
+.footer {
+  background-color: #27374d;
+  color: #dde6ed;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer p {
+  width: 100%;
+  margin: 0 auto;
+  color: #dde6ed;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

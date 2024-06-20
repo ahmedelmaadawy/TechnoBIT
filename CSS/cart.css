@@ -64,7 +64,6 @@ span {
   margin: 10px;
 }
 
-/**/
 table,
 th,
 thead {
@@ -95,7 +94,7 @@ td {
 
 td button {
   width: 70%;
-  font-size: 20px;
+  font-size: 15px;
   border: none;
   border-radius: 50px;
   background-color: #27374d;
@@ -123,7 +122,10 @@ td button:hover {
   cursor: pointer;
   background-color: rgb(13, 99, 17);
 }
-
+.container {
+  height: 100vh;
+  padding-bottom: 60px;
+}
 .container .checkout {
   color: #27374d;
   background-color: #388fd1bd;
@@ -147,13 +149,12 @@ td button:hover {
 }
 
 /* ------------footer ---------*/
-
 .footer {
   background-color: #27374d;
   color: #dde6ed;
   padding: 20px 0;
   text-align: center;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }

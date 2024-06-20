@@ -74,6 +74,7 @@ function addToCart(productId) {
       "cart",
       JSON.stringify([{ id: productId, quantity: 1 }])
     );
+    displayCart();
     return;
   } else {
     for (var i = 0; i < cart.length; i++) {
@@ -81,6 +82,7 @@ function addToCart(productId) {
         cart[i].quantity++;
         localStorage.setItem("cart", JSON.stringify(cart));
         console.log(cart);
+        displayCart();
         return;
       }
     }
