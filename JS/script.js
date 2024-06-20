@@ -6,7 +6,7 @@ var passval = document.getElementById("passval");
 var confpassval = document.getElementById("confpassval");
 var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
-
+// submitting the form and validating the data
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   var userName = document.getElementById("username");
@@ -28,7 +28,7 @@ form.addEventListener("submit", function (e) {
     window.location.href = "./home.html";
   }
 });
-
+//data validation function
 function IsValida(userName, email, password, confpassword) {
   if (
     userName == "" ||

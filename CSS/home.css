@@ -111,25 +111,7 @@ img.displaySlide {
 .next {
   right: 0;
 }
-/* ------------footer ---------*/
-.footer {
-  background-color: #27374d;
-  color: #dde6ed;
-  padding: 20px 0;
-  text-align: center;
-}
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.footer p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.5;
-  color: #9db2bf;
-}
 /*home body products*/
 h1,
 h2 {
@@ -143,7 +125,7 @@ h2 {
 }
 .products {
   margin: 5px auto;
-  text-align: center; /* Center align products */
+  text-align: center;
 }
 .product {
   color: #27374d;
@@ -156,7 +138,7 @@ h2 {
   display: inline-block;
   margin-bottom: 20px;
   transition: all 0.5s ease;
-  vertical-align: top; /* Ensure all products align at the top */
+  vertical-align: top;
 }
 .product:hover {
   background-color: #9db2bf;
@@ -262,6 +244,25 @@ p span {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+/* ------------footer ---------*/
+.footer {
+  background-color: #27374d;
+  color: #dde6ed;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9db2bf;
 }
 
 /* scroll bar style*/

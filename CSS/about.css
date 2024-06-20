@@ -1,15 +1,19 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   color: #27374d;
 }
+
 body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  margin: 0;
-  padding: 0;
   background-color: #dde6ed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
 i {
   color: #dde6ed;
 }
@@ -20,23 +24,27 @@ li {
   display: inline-block;
   margin: 10px 20px;
   list-style: none;
-  text-align: left;
 }
+
 a {
   text-decoration: none;
-  color: #dde6ed; /* Ensuring text in links is visible against the dark navbar */
+  color: #dde6ed;
 }
+
 .nav {
   background-color: #27374d;
   height: 60px;
   width: 100%;
 }
+
 .nav span {
-  color: #dde6ed; /* Ensuring text in spans is visible against the dark navbar */
+  color: #dde6ed;
 }
+
 #right {
   float: right;
 }
+
 li button {
   display: block;
   margin-left: 20px;
@@ -47,63 +55,85 @@ li button {
   padding: 10px 20px;
   border-radius: 5px;
 }
+
 li button:hover {
   cursor: pointer;
   background-color: rgb(190, 29, 29);
   color: #dde6ed;
 }
+
 .clearfix {
   overflow: auto;
 }
-/*about*/
+
+/* About Us Section */
 .about-us {
   width: 60%;
   margin: 0 auto;
-  height: 100vh;
   padding: 30px;
+  flex: 1; 
 }
+
 .about-us h1,
 .about-us h2 {
   text-align: center;
   margin: 10px;
   font-size: 30px;
 }
-.about-us p{
+
+.about-us p {
   font-size: 25px;
   margin: 10px;
-  word-spacing: 3px;}
+  word-spacing: 3px;
+}
 
 .about-us ul {
   list-style-type: disc;
-
+  margin-left: 20px; 
 }
+
 .about-us ul li {
   color: #27374d;
   font-size: 20px;
-  display: list-item; /* Ensures list items appear vertically */
+  display: list-item;
 }
-.content{
-    margin: 10px;
+
+.content {
+  margin: 10px;
 }
 
 /* Footer */
-
 .footer {
   background-color: #27374d;
   color: #dde6ed;
   text-align: center;
   padding: 20px 0;
-  margin-top: 50px;
+  margin-top: auto; 
+}
+.footer p{
+    color: #dde6ed;
 }
 
-.footer p {
-  width: 100%;
+.footer .container {
+  width: 80%;
   margin: 0 auto;
-  color: #dde6ed;
 }
 
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
+}
+
+/* scroll bar style*/
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dde6ed;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #27374d;
+  border-radius: 10px;
 }

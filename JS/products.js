@@ -1,4 +1,6 @@
+//the container of every product
 var productsElement = document.getElementsByClassName("products")[0];
+
 var categories = [
   "All Products",
   "Phones",
@@ -9,21 +11,12 @@ var categories = [
 ];
 var categoriesElement = document.getElementsByClassName("categories-list")[0];
 /*products*/
+/*getting all rpoducts from local storage */
 var allProducts = JSON.parse(localStorage.getItem("products"));
-getName();
 displayCategories();
 displayProducts(allProducts);
-displayCart();
-function getName() {
-  for (var i = 0; i < document.cookie.split(";").length; i++) {
-    if (document.cookie.split(";")[i].split("=")[0].trim() == "name") {
-      document.getElementById("username").innerHTML = document.cookie
-        .split(";")
-        [i].split("=")[1];
-    }
-  }
-}
 
+//
 function displayCategories() {
   for (var i = 0; i < categories.length; i++) {
     var button = document.createElement("button");
@@ -52,10 +45,7 @@ function filterCategories(cat) {
           </div>`;
   displayProducts(products);
 }
-function logout() {
-  document.cookie = "";
-  window.location.href = "index.html";
-}
+
 function displayProducts(productsArray) {
   for (var i = 0; i < productsArray.length; i++) {
     var p = document.createElement("p");
@@ -109,14 +99,7 @@ function addItemToCart(productId) {
   }
 }
 
-function displayCart() {
-  var count = 0;
-  var cart = JSON.parse(localStorage.getItem("cart"));
-  for (var i = 0; i < cart.length; i++) {
-    count += cart[i].quantity;
-  }
-  document.getElementById("cart").innerHTML = count;
-}
+
 /*view product */
 function viewProduct(productId) {
   var product = allProducts.find((product) => product.id == productId);
@@ -148,6 +131,7 @@ function viewProduct(productId) {
   productInfoDiv.appendChild(productPrice);
 
   var addToCartButton = document.createElement("button");
+  addToCartButton.id = product.id;
   addToCartButton.textContent = "Add to Cart";
   productInfoDiv.appendChild(addToCartButton);
   addToCartButton.addEventListener("click", function (e) {

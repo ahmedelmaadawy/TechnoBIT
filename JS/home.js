@@ -1,21 +1,9 @@
-displayCart();
-getName();
-
-function getName() {
-  for (var i = 0; i < document.cookie.split(";").length; i++) {
-    if (document.cookie.split(";")[i].split("=")[0].trim() == "name") {
-      document.getElementById("username").innerHTML = document.cookie
-        .split(";")
-        [i].split("=")[1];
-    }
-  }
-}
 
 // Slider
 var slides = document.querySelectorAll(".slides img");
 var slideIndex = 0;
 var intervalId = null;
-
+//intiating the slider when page load
 document.addEventListener("DOMContentLoaded", initializeSlider);
 function initializeSlider() {
   if (slides.length > 0) {
@@ -23,7 +11,7 @@ function initializeSlider() {
     intervalId = setInterval(nextSlide, 3000);
   }
 }
-
+//showing the slide
 function showSlide(index) {
   if (index >= slides.length) {
     slideIndex = 0;
@@ -44,10 +32,7 @@ function nextSlide() {
   slideIndex++;
   showSlide(slideIndex);
 }
-function logout() {
-  document.cookie = "";
-  window.location.href = "index.html";
-}
+
 // scroll up button
 document.getElementById("topbutton").addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -58,15 +43,7 @@ document.getElementById("products").addEventListener("click", function () {
   window.location.href = "products.html";
 });
 
-function displayCart() {
-  var count = 0;
-  var cart = JSON.parse(localStorage.getItem("cart"));
-
-  for (var i = 0; i < cart.length; i++) {
-    count += cart[i].quantity;
-  }
-  document.getElementById("cart").innerHTML = count;
-}
+//adding items on sale to cart
 function addToCart(productId) {
   var cart = JSON.parse(localStorage.getItem("cart"));
   if (cart.length == 0) {
