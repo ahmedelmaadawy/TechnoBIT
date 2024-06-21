@@ -40,12 +40,18 @@ function IsValida(userName, email, password, confpassword) {
     all.style.display = "block";
     return false;
   } else if (!emailPattern.test(email)) {
+    all.style.display = "none";
     emailval.style.display = "block";
     return false;
   } else if (!passwordPattern.test(password)) {
+    emailval.style.display = "none";
+    all.style.display = "none";
     passval.style.display = "block";
     return false;
   } else if (password != confpassword) {
+    emailval.style.display = "none";
+    all.style.display = "none";
+    passval.style.display = "none";
     confpassval.style.display = "block";
     return false;
   } else {

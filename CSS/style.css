@@ -27,7 +27,7 @@ form {
   background-color: #dde6ed;
 
   padding: 30px;
-  border-radius: 100px;
+  border-radius: 30px;
 }
 
 label,
@@ -38,7 +38,7 @@ button {
   font-size: 20px;
   width: 400px;
   height: 30px;
-  border-radius: 50px;
+  border-radius: 10px;
   font-weight: 600;
 }
 
@@ -62,6 +62,7 @@ input {
   background-color: #dde6ed;
   color: #27374d;
   border: 2px solid #27374d;
+  padding-left: 13px;
 }
 
 button {
