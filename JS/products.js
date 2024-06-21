@@ -10,13 +10,19 @@ var categories = [
   "Headphones",
 ];
 var categoriesElement = document.getElementsByClassName("categories-list")[0];
+var categoriesBtn = document.getElementById("categories-btn");
+categoriesBtn.addEventListener("click", function () {
+  document.getElementsByClassName("categories")[0].style.display =
+    "none";
+  document.getElementsByClassName("products")[0].style.marginLeft = "20px";
+});
 /*products*/
 /*getting all rpoducts from local storage */
 var allProducts = JSON.parse(localStorage.getItem("products"));
 displayCategories();
 displayProducts(allProducts);
 
-//
+
 function displayCategories() {
   for (var i = 0; i < categories.length; i++) {
     var button = document.createElement("button");
@@ -98,7 +104,6 @@ function addItemToCart(productId) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }
 }
-
 
 /*view product */
 function viewProduct(productId) {
