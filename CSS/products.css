@@ -122,6 +122,25 @@ li button {
   color: #dde6ed;
   cursor: pointer;
 }
+/*categories button*/
+#categories-col {
+  background-color: #27374d;
+  color: #dde6ed;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  position: fixed;
+  left: 23px;
+  top: 30%;
+  transform: translateY(-50%) rotate(-90deg);
+  transform-origin: left center;
+}
+#categories-col:hover {
+  background-color: #9db2bf;
+  color: #27374d;
+  cursor: pointer;
+}
 /* Products */
 .products {
   margin-left: 220px;

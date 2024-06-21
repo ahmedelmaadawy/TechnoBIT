@@ -13,8 +13,14 @@ var categoriesElement = document.getElementsByClassName("categories-list")[0];
 var categoriesBtn = document.getElementById("categories-btn");
 categoriesBtn.addEventListener("click", function () {
   document.getElementsByClassName("categories")[0].style.display = "none";
-  document.getElementsByClassName("products")[0].style.marginLeft = "20px";
+  document.getElementsByClassName("products")[0].style.marginLeft = "40px";
 });
+document
+  .getElementById("categories-col")
+  .addEventListener("click", function () {
+    document.getElementsByClassName("categories")[0].style.display = "block";
+    document.getElementsByClassName("products")[0].style.marginLeft = "220px";
+  });
 /*products*/
 /*getting all rpoducts from local storage */
 var allProducts = JSON.parse(localStorage.getItem("products"));
