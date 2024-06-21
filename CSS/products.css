@@ -30,6 +30,9 @@ a {
   background-color: #27374d;
   height: 60px;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .nav ul li a:hover {
   color: #9db2bf;

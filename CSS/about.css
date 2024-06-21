@@ -30,11 +30,13 @@ a {
   text-decoration: none;
   color: #dde6ed;
 }
-
 .nav {
   background-color: #27374d;
   height: 60px;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav span {
@@ -71,7 +73,7 @@ li button:hover {
   width: 60%;
   margin: 0 auto;
   padding: 30px;
-  flex: 1; 
+  flex: 1;
 }
 
 .about-us h1,
@@ -89,7 +91,7 @@ li button:hover {
 
 .about-us ul {
   list-style-type: disc;
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
 .about-us ul li {
@@ -108,10 +110,10 @@ li button:hover {
   color: #dde6ed;
   text-align: center;
   padding: 20px 0;
-  margin-top: auto; 
+  margin-top: auto;
 }
-.footer p{
-    color: #dde6ed;
+.footer p {
+  color: #dde6ed;
 }
 
 .footer .container {
