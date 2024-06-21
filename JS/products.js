@@ -12,8 +12,7 @@ var categories = [
 var categoriesElement = document.getElementsByClassName("categories-list")[0];
 var categoriesBtn = document.getElementById("categories-btn");
 categoriesBtn.addEventListener("click", function () {
-  document.getElementsByClassName("categories")[0].style.display =
-    "none";
+  document.getElementsByClassName("categories")[0].style.display = "none";
   document.getElementsByClassName("products")[0].style.marginLeft = "20px";
 });
 /*products*/
@@ -21,7 +20,6 @@ categoriesBtn.addEventListener("click", function () {
 var allProducts = JSON.parse(localStorage.getItem("products"));
 displayCategories();
 displayProducts(allProducts);
-
 
 function displayCategories() {
   for (var i = 0; i < categories.length; i++) {
@@ -134,6 +132,10 @@ function viewProduct(productId) {
   var productPrice = document.createElement("p");
   productPrice.textContent = `Price : ${product.price}$`;
   productInfoDiv.appendChild(productPrice);
+
+  var productColor = document.createElement("p");
+  productColor.textContent = `Color : ${product.color}`;
+  productInfoDiv.appendChild(productColor);
 
   var addToCartButton = document.createElement("button");
   addToCartButton.id = product.id;
