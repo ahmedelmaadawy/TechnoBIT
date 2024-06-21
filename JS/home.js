@@ -1,4 +1,3 @@
-
 // Slider
 var slides = document.querySelectorAll(".slides img");
 var slideIndex = 0;
@@ -22,6 +21,11 @@ function showSlide(index) {
     slide.classList.remove("displaySlide");
   });
   slides[slideIndex].classList.add("displaySlide");
+  var dots = document.querySelectorAll(".dot");
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  dots[slideIndex].classList.add("active");
 }
 function prevSlide() {
   clearInterval(intervalId);
@@ -67,4 +71,9 @@ function addToCart(productId) {
     localStorage.setItem("cart", JSON.stringify(cart));
   }
   displayCart();
+}
+// test
+function currentSlide(index) {
+  slideIndex = index - 1;
+  showSlide(slideIndex);
 }
