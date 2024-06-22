@@ -86,6 +86,7 @@ span {
   margin-left: 46px;
 }
 #all,
+#nameval,
 #emailval,
 #passval,
 #confpassval {
