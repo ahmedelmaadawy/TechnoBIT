@@ -3,7 +3,7 @@ var slides = document.querySelectorAll(".slides img");
 var slideIndex = 0;
 var intervalId = null;
 //intiating the slider when page load
-document.addEventListener("DOMContentLoaded", initializeSlider);
+initializeSlider();
 function initializeSlider() {
   if (slides.length > 0) {
     slides[slideIndex].classList.add("displaySlide");
